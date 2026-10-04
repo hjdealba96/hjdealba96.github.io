@@ -17,39 +17,31 @@ function checkToggle(check) {
     switcher.checked = check;
 }
 
-  // Toggles the "dark-mode" class based on if the media query matches
+  // Toggles the "dark-mode" class and persists the choice
 function toggleDarkMode(state) {
     checkToggle(state);
-
-    const hasClass = document.body.classList.contains("dark-mode");
-    
-    if (state) {
-      if (!hasClass) {
-        document.body.classList.add("dark-mode");
-      }
-
-    } else {
-      if (hasClass) {
-        document.body.classList.remove("dark-mode");
-      }
-    }
+    document.body.classList.toggle("dark-mode", state);
   }
 
-// MediaQueryList object
+// Determine initial state: saved preference > OS preference > default dark
+const saved = localStorage.getItem("darkMode");
 const useDark = window.matchMedia("(prefers-color-scheme: dark)");
-let darkModeState = useDark.matches;
+let darkModeState = saved !== null ? saved === "true" : true;
 
-// Listen for changes in the OS settings
-// addListener is used because older versions of Safari don't support addEventListener
-useDark.addListener(function(evt) {
-    toggleDarkMode(evt.matches);
+// Listen for changes in the OS settings (only when no saved preference)
+useDark.addEventListener("change", function(evt) {
+    if (localStorage.getItem("darkMode") === null) {
+      darkModeState = evt.matches;
+      toggleDarkMode(darkModeState);
+    }
 });
 
-// Initial setting depending on the prefers-color-mode
-  toggleDarkMode(true);
+// Apply initial state
+  toggleDarkMode(darkModeState);
 
   function switchListener() {
     darkModeState = !darkModeState;
+    localStorage.setItem("darkMode", darkModeState);
     toggleDarkMode(darkModeState);
   }
 
