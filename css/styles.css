@@ -378,8 +378,8 @@ p {
 }
 
 .resume-section-content .dev-icons .list-inline-item a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
 .dev-icons .list-inline-item i,
