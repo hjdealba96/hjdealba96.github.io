@@ -27,4 +27,5 @@ No build tools, package manager, or dev server required. Open `index.html` in a 
 - **Dev icons**: Skills section uses Devicon classes for standard icons and inline SVGs with class `.custom-icon` for tools not in Devicon (Jetpack Compose, Figma, Notion, Linear, Maestro, etc.). Each icon links to the tool's website. Two-tone SVGs use `.icon-cutout` filled with `var(--bg)` for contrast.
 - **Education links**: `.edu-link` / `.edu-link-a` classes style small linked domain names below institution headings.
 - **External CDN dependencies**: Bootstrap CSS + JS (5.1.3), Font Awesome (6.1.0), Google Fonts (Saira Extra Condensed, Muli), Devicon (latest).
+- **Analytics**: Google Analytics 4 (GA4) via gtag.js. Enhanced measurement is enabled by default, which auto-tracks page views, outbound clicks, and scroll depth. No custom events are configured — GA4 defaults cover current needs. Dashboard at analytics.google.com.
 - **Content is in English** — the site owner is a native Spanish speaker with professional English proficiency.
