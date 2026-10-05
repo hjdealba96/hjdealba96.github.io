@@ -7,8 +7,8 @@
         <meta name="author" content="Henry De Alba" />
         <title>Henry De Alba</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-         <!-- Font Awesome icons (free version)-->
-         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
@@ -26,6 +26,14 @@
                 <span class="d-block d-lg-none">Henry De Alba</span>
                 <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpeg" alt="Henry's profile picture" /></span>
             </a>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
@@ -37,37 +45,23 @@
                 </ul>
             </div>
         </nav>
-        <!-- Dark Mode Switch-->
-        <div class="mode-switch">
-            <label class="switch">
-              <input type="checkbox" />
-              <span class="slider">
-                <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round"
-                  stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-                </svg>
-              </span>
-            </label>
-          </div>
         <!-- Page Content-->
         <div class="container-fluid p-0">
 
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Henry De Alba
-                    </h1>
-                    <div class="subheading mb-5">Barranquilla, Colombia 🇨🇴</div>
-                    <p class="lead mb-5">I am a passionated Software Engineer who really enjoys coding and building amazing features for mobile apps 📱. I love everything related with Software Development and Technology as such. 
-                    </br></br>
+                    <h1 class="mb-0">Henry De Alba</h1>
+                    <p class="subtitle">Software Engineer</p>
+                    <div class="location mb-5">Barranquilla, Colombia 🇨🇴</div>
+                    <p class="lead mb-5">I am a passionated Software Engineer who really enjoys coding and building amazing features for mobile apps 📱. I love everything related with Software Development and Technology as such.
+                    <br><br>
                         Want to get in touch? Book a 15 min call with me on <a href="https://calendly.com/hjdealba96/letsmeet" target="_blank">Calendly</a>!.</p>
                     <div class="social-icons">
-                        <a class="social-icon" target="_blank" href="https://www.linkedin.com/in/hjdealba96/"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" target="_blank" href="https://github.com/hjdealba96"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" target="_blank" href="https://join.skype.com/invite/E2MGpgbgHfuo"><i class="fab fa-skype"></i></a>
-                        <a class="social-icon" target="_blank" href="https://t.me/hjdealba96"><i class="fab fa-telegram"></i></a>
-                        <a class="social-icon" target="_blank" href="mailto:hjdealba96@gmail.com"><i class="fa fa-envelope"></i></a>
+                        <a class="social-icon" target="_blank" href="https://www.linkedin.com/in/hjdealba96/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" target="_blank" href="https://github.com/hjdealba96" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" target="_blank" href="https://t.me/hjdealba96" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a class="social-icon" target="_blank" href="mailto:hjdealba96@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
                     </div>
                 </div>
             </section>
@@ -171,7 +165,7 @@
                     <ul class="list-inline">
                         <li class="list-inline-item">
                             <span>Professional English Proficiency 🇺🇸, </span>
-                        </li> 
+                        </li>
                         <li class="list-inline-item">
                             <span>Fluent Spanish (Native Speaker) 🇪🇸</span>
                         </li>
@@ -183,7 +177,7 @@
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
-                    <p>One of my preferred activities is solving code challenges on <a target="_blank" href="https://www.hackerearth.com">HackerEarth</a>; this is an exciting exercise for me!. Also, I spend some time in my daily routine reading articles about software development on <a target="_blank" href="https://medium.com">Medium</a> and 
+                    <p>One of my preferred activities is solving code challenges on <a target="_blank" href="https://www.hackerearth.com">HackerEarth</a>; this is an exciting exercise for me!. Also, I spend some time in my daily routine reading articles about software development on <a target="_blank" href="https://medium.com">Medium</a> and
                         <a target="_blank" href="https://hackernoon.com">Hackernoon</a>. On the other hand, I usually complete courses from <a target="_blank" href="https://codelabs.developers.google.com">Google Code Labs</a> to level up my technical skills.</p>
                     <p>I like to play soccer with some friends, watch series and movies, and play video games in my free time. Occasionally, I run outside or do gardening in my backyard.</p>
                     <p class="mb-0">My favorite hobby is cooking; I always try a new recipe every week. They say I'm a specialist in preparing typical food (from the north coast of Colombia) and fast food, but I don't think so 😅.</p>

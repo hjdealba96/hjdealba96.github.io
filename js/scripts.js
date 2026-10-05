@@ -5,21 +5,21 @@
  */
 
 window.addEventListener('DOMContentLoaded', () => {
-    const switcher = document.querySelector("input");
+    const toggle = document.getElementById('themeToggle');
 
     function toggleDarkMode(state) {
-        switcher.checked = state;
-        document.body.classList.toggle("dark-mode", state);
+        document.body.classList.toggle('dark-mode', state);
+        toggle.setAttribute('aria-label', state ? 'Switch to light mode' : 'Switch to dark mode');
     }
 
     // Determine initial state: saved preference > default dark
-    const saved = localStorage.getItem("darkMode");
-    const useDark = window.matchMedia("(prefers-color-scheme: dark)");
-    let darkModeState = saved !== null ? saved === "true" : true;
+    const saved = localStorage.getItem('darkMode');
+    const useDark = window.matchMedia('(prefers-color-scheme: dark)');
+    let darkModeState = saved !== null ? saved === 'true' : true;
 
     // Follow OS changes when no manual preference is saved
-    useDark.addEventListener("change", (evt) => {
-        if (localStorage.getItem("darkMode") === null) {
+    useDark.addEventListener('change', (evt) => {
+        if (localStorage.getItem('darkMode') === null) {
             darkModeState = evt.matches;
             toggleDarkMode(darkModeState);
         }
@@ -27,9 +27,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     toggleDarkMode(darkModeState);
 
-    switcher.addEventListener("change", () => {
+    toggle.addEventListener('click', () => {
         darkModeState = !darkModeState;
-        localStorage.setItem("darkMode", darkModeState);
+        localStorage.setItem('darkMode', darkModeState);
         toggleDarkMode(darkModeState);
     });
 

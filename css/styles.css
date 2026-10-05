@@ -1,119 +1,51 @@
 /*!
-* Start Bootstrap - Resume v7.0.5 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
+ * Start Bootstrap - Resume v7.0.5 (https://startbootstrap.com/theme/resume)
+ * Copyright 2013-2022 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
+ */
 
-/* Custom variable overrides */
+/* ==========================================================================
+   Color System
+   ========================================================================== */
+
 :root {
-  --bs-body-font-family: Muli, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  --bs-body-color: #6c757d;
-  --bs-primary-rgb: 79, 79, 79;
-  --bs-title: #343a40;
-  --slider-icon-filter: 1;
+  --bg: #ffffff;
+  --surface: #1e2d32;
+  --surface-2: #f0f2f3;
+  --text: #1a2024;
+  --text-secondary: #4a5558;
+  --text-muted: #778588;
+  --accent: #378a84;
+  --accent-hover: #2d7c77;
+  --accent-rgb: 55, 138, 132;
+  --border: rgba(0, 0, 0, 0.08);
+
+  --bs-body-font-family: Muli, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-body-color: var(--text-secondary);
+  --bs-body-bg: var(--bg);
 }
 
-/* Dark mode */
 .dark-mode {
-  --bs-body-bg: #10181A;
-  --bs-body-color: #fff;
-  --bs-title: #fff;
-  --bs-primary-rgb: 44, 64, 69;
-  --slider-icon-filter: 0;
+  --bg: #0d1517;
+  --surface: #152326;
+  --surface-2: #203338;
+  --text: #f3f5f5;
+  --text-secondary: #a7b0b2;
+  --text-muted: #778588;
+  --accent: #5cb8b2;
+  --accent-hover: #75cbc5;
+  --accent-rgb: 92, 184, 178;
+  --border: rgba(255, 255, 255, 0.08);
 }
 
-/* Heading overrides (template uses Saira Extra Condensed + custom color) */
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--bs-title);
-}
+/* ==========================================================================
+   Base
+   ========================================================================== */
 
-h1, .h1 {
-  line-height: 1;
-}
-
-/* Dark mode toggle switch */
-.mode-switch {
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  grid-area: 2/3/3/5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 1em;
-  margin-right: 1em;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(212, 219, 222);
-  border-radius: 34px;
-  transition: 0.6s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #dfc700;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider-icon {
-  position: absolute;
-  right: 6px;
-  top: 7px;
-  filter: invert(var(--slider-icon-filter));
-}
-
-/* Dev icon hover */
-.dev-icons .list-inline-item i:hover {
-  color: #bd5d38;
-}
-
-/* Layout */
 body {
   padding-top: 3.375rem;
+  color: var(--text-secondary);
+  background-color: var(--bg);
 }
 
 @media (min-width: 992px) {
@@ -123,30 +55,172 @@ body {
   }
 }
 
-p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
+/* Headings */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  color: var(--text);
+}
+
+h1, .h1 {
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+h2, .h2 {
+  text-transform: uppercase;
+}
+
+/* Content links */
+.resume-section-content a:not(.social-icon) {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--accent-rgb), 0.3);
+  text-underline-offset: 4px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.resume-section-content a:not(.social-icon):hover {
+  color: var(--accent-hover);
+  text-decoration-color: var(--accent-hover);
+}
+
+.resume-section-content a:not(.social-icon):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Horizontal rules */
+hr {
+  border-color: var(--border);
+  opacity: 1;
+}
+
+/* Bootstrap overrides */
+.bg-primary {
+  background-color: var(--surface) !important;
+}
+
+.text-primary {
+  color: var(--accent) !important;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+.subtitle {
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
 }
 
 .subheading {
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
+  color: var(--text-muted);
 }
 
-/* Sidebar navigation */
+.location {
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+p.lead {
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.8;
+  max-width: 40rem;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Theme Toggle
+   ========================================================================== */
+
+.theme-toggle {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-left: auto;
+  margin-right: 0.5rem;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.icon-sun { display: none; }
+.icon-moon { display: block; }
+.dark-mode .icon-sun { display: block; }
+.dark-mode .icon-moon { display: none; }
+
+/* ==========================================================================
+   Sidebar Navigation
+   ========================================================================== */
+
 #sideNav {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  padding: 0.75rem 1rem;
+  position: relative;
+  transition: color 0.2s ease;
 }
+
+#sideNav .navbar-nav .nav-item .nav-link:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#sideNav .navbar-nav .nav-item .nav-link.active {
+  color: #ffffff;
+}
+
+#sideNav .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
 #sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+  box-shadow: none;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 @media (min-width: 992px) {
@@ -162,61 +236,119 @@ p.lead {
     width: 17rem;
     height: 100vh;
   }
+
   #sideNav .navbar-brand {
     display: flex;
     margin: auto auto 0;
     padding: 0.5rem;
   }
+
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
     max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(92, 184, 178, 0.5);
   }
+
   #sideNav .navbar-collapse {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     flex-grow: 0;
     width: 100%;
     margin-bottom: auto;
   }
+
   #sideNav .navbar-collapse .navbar-nav {
     flex-direction: column;
     width: 100%;
   }
+
   #sideNav .navbar-collapse .navbar-nav .nav-item {
     display: block;
   }
+
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
+    padding: 0.75rem 1.5rem;
+  }
+
+  #sideNav .navbar-nav .nav-item .nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 50%;
+    background-color: var(--accent);
+    border-radius: 0 2px 2px 0;
+  }
+
+  .theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
-/* Social icons */
+/* ==========================================================================
+   Social Icons
+   ========================================================================== */
+
 .social-icons .social-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 3.5rem;
-  width: 3.5rem;
-  background-color: #495057;
-  color: #fff;
-  border-radius: 100%;
-  font-size: 1.5rem;
-  margin-right: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--surface-2);
+  color: var(--text-secondary);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 1.2rem;
+  margin-right: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
+
 .social-icons .social-icon:last-child {
   margin-right: 0;
 }
+
 .social-icons .social-icon:hover {
-  background-color: #bd5d38;
+  transform: translateY(-2px);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
-/* Dev icons */
+.social-icons .social-icon:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Dev Icons
+   ========================================================================== */
+
 .dev-icons {
   font-size: 3rem;
 }
 
-/* Resume sections */
+.dev-icons .list-inline-item i {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.dev-icons .list-inline-item i:hover {
+  color: var(--accent);
+}
+
+/* ==========================================================================
+   Resume Sections
+   ========================================================================== */
+
 section.resume-section {
   display: flex;
   align-items: center;
@@ -226,6 +358,7 @@ section.resume-section {
   padding-bottom: 5rem;
   max-width: 75rem;
 }
+
 section.resume-section .resume-section-content {
   width: 100%;
 }
@@ -235,11 +368,25 @@ section.resume-section .resume-section-content {
     min-height: 100vh;
   }
 }
+
 @media (min-width: 992px) {
   section.resume-section {
     padding-left: 3rem;
     padding-right: 3rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
