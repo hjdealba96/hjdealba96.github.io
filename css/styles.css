@@ -72,7 +72,7 @@ h2, .h2 {
 }
 
 /* Content links */
-.resume-section-content a:not(.social-icon):not(.anchor-heading) {
+.resume-section-content a:not(.social-icon):not(.anchor-heading):not(.edu-link-a) {
   color: var(--accent);
   text-decoration: underline;
   text-decoration-color: rgba(var(--accent-rgb), 0.3);
@@ -125,6 +125,25 @@ hr {
   font-weight: 500;
   color: var(--accent);
   margin-bottom: 0.25rem;
+}
+
+.edu-link {
+  font-size: 0.9rem;
+}
+
+.edu-link a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.edu-link a:hover {
+  color: var(--accent);
+}
+
+.edu-link i {
+  font-size: 0.75rem;
+  margin-right: 0.2rem;
 }
 
 .subheading {
