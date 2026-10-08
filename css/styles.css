@@ -91,12 +91,6 @@ h2, .h2 {
   border-radius: 2px;
 }
 
-/* Horizontal rules */
-hr {
-  border-color: var(--border);
-  opacity: 1;
-}
-
 /* Bootstrap overrides */
 .bg-primary {
   background-color: var(--surface) !important;
