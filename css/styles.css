@@ -446,6 +446,39 @@ section.resume-section .resume-section-content {
 }
 
 /* ==========================================================================
+   Responsive: mobile date alignment
+   ========================================================================== */
+
+@media (max-width: 767.98px) {
+  .resume-section-content .d-flex.flex-column {
+    display: grid !important;
+    grid-template-columns: 1fr;
+  }
+  .resume-section-content .d-flex.flex-column > .flex-grow-1 {
+    display: contents;
+  }
+  .resume-section-content .d-flex.flex-column > .flex-grow-1 > h3 {
+    order: 1;
+  }
+  .resume-section-content .d-flex.flex-column > .flex-grow-1 > .subheading {
+    order: 2;
+    margin-bottom: 0.25rem !important;
+  }
+  .resume-section-content .d-flex.flex-column > .flex-grow-1 > .edu-link {
+    order: 2;
+  }
+  .resume-section-content .d-flex.flex-column > .flex-shrink-0 {
+    order: 3;
+    margin-bottom: 0.75rem;
+  }
+  .resume-section-content .d-flex.flex-column > .flex-grow-1 > p,
+  .resume-section-content .d-flex.flex-column > .flex-grow-1 > ul,
+  .resume-section-content .d-flex.flex-column > .flex-grow-1 > div:not(.subheading):not(.edu-link) {
+    order: 4;
+  }
+}
+
+/* ==========================================================================
    Accessibility
    ========================================================================== */
 
