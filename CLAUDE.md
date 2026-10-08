@@ -13,7 +13,7 @@ This is a static site with no build step — edit files directly and push to `ma
 - `index.html` — Single-page resume with sections: About, Experience, Education, Skills, Interests. Uses Bootstrap 5.1.3 scrollspy for section-based navigation via a fixed sidebar. Section headings use `.anchor-heading` links for direct navigation.
 - `css/styles.css` — Custom theme styles only (Bootstrap CSS is loaded from CDN). Includes a CSS variable-based color system with light and dark mode palettes, sidebar/nav styling, social icons, theme toggle, custom SVG icon support (`.custom-icon` with `.icon-cutout` for two-tone rendering), education links, typography, and accessibility rules.
 - `js/scripts.js` — Dark mode toggle logic (persists to `localStorage`, defaults to dark), Bootstrap scrollspy initialization, and responsive navbar collapse handling.
-- `assets/img/` — Profile photo and optimized favicons (16, 32, 180, 192px PNG).
+- `assets/img/` — Profile photo and optimized favicons (16, 32, 180px PNG).
 
 ## Development
 
