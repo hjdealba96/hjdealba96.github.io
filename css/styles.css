@@ -72,7 +72,7 @@ h2, .h2 {
 }
 
 /* Content links */
-.resume-section-content a:not(.social-icon):not(.anchor-heading):not(.edu-link-a) {
+.resume-section-content a:not(.social-icon):not(.anchor-heading):not(.edu-link-a):not(.location-link) {
   color: var(--accent);
   text-decoration: underline;
   text-decoration-color: rgba(var(--accent-rgb), 0.3);
@@ -80,7 +80,7 @@ h2, .h2 {
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
-.resume-section-content a:not(.social-icon):not(.anchor-heading):hover {
+.resume-section-content a:not(.social-icon):not(.anchor-heading):not(.location-link):hover {
   color: var(--accent-hover);
   text-decoration-color: var(--accent-hover);
 }
