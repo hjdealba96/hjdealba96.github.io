@@ -162,7 +162,7 @@ h2, .h2 {
 }
 
 .location-link:hover {
-  color: inherit;
+  color: var(--accent);
 }
 
 p.lead {
