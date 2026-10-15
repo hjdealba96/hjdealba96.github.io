@@ -101,12 +101,13 @@
                             <div class="subheading mb-3">Mudflap <span class="edu-link"><a class="edu-link-a" href="https://www.mudflapinc.com" target="_blank"><i class="fas fa-link"></i> mudflapinc.com</a></span></div>
                             <p>Built the Mudflap Android app from the ground up and have owned it for seven years. Sole Android engineer for the first two years, shipping the MVP and scaling the product to 100K+ installs, 150K+ monthly active users, and 255+ releases. The app helps commercial truck drivers find discounted diesel and pay at the pump from their phone.</p>
                             <ul>
-                                <li>Founded the app and an architecture that has lasted seven years without a rewrite. The team grew from 1 to 4 engineers over that time.</li>
+                                <li>Built the app and an architecture that has lasted seven years without a rewrite. The team grew from 1 to 4 engineers over that time.</li>
                                 <li>Built the real-time fuel purchase flow, handling dropped connections and preventing double charges.</li>
                                 <li>Led Android payments for seven years: 3-D Secure, Google Pay, and Stripe Link (drove the cross-platform decision and production setup).</li>
                                 <li>Shaped the APIs mobile depends on: raised ~70 API design concerns over five years, 20+ of which changed the backend. Also authored and merged backend API contract PRs to unblock mobile delivery.</li>
                                 <li>Originated technical decisions that became other teams' projects: proposed backend-owned price formatting (now a cross-platform migration), wrote the Compose adoption report that shaped the migration roadmap, and selected Maestro for E2E testing then built the foundational suite and CI.</li>
-                                <li>Led adoption of performance monitoring (Embrace, Firebase Performance) and drove stability improvements: crashes fell ~70% and freezes ~90% over three years on Google Play. Key screens render under 100ms median. Led the Android side of a major search rewrite that shipped 8-9% faster in A/B testing.</li>
+                                <li>Led adoption of performance monitoring (Embrace, Firebase Performance) and drove stability improvements: crashes fell ~70% and freezes ~90% over three years on Google Play. Key screens render under 100ms median.</li>
+                                <li>Led the Android side of a major search rewrite that shipped 8-9% faster in A/B testing.</li>
                                 <li>Set the team's review bar (1,250+ reviews) and owned production health (99.9%+ crash-free users, 50+ support escalations handled).</li>
                                 <li>Built the team's AI code review system (GitHub Actions + Claude) that reviews PRs with enforced guardrails and shared learnings the whole team contributes to.</li>
                                 <li>Leading mobile AI workflow automation: built an on-device verification agent that diagnoses bugs end-to-end with evidence, and an automated issue triage agent that reads support reports, runs diagnostics, and proposes draft PRs for review. Roadmap spans verify-before-merge to post-release health monitoring.</li>
@@ -131,7 +132,7 @@
                             <div class="subheading mb-3">Koombea <span class="edu-link"><a class="edu-link-a" href="https://www.koombea.com" target="_blank"><i class="fas fa-link"></i> koombea.com</a></span></div>
                             <p>Worked at one of the leading mobile development agencies in the region across multiple client projects, including the early stages of the Mudflap Android app, Luna (a therapy platform), and Curbside SOS.</p>
                             <ul>
-                                <li>Shipped Mudflap v1 to the Play Store, launching the product that now serves 1M+ monthly active users.</li>
+                                <li>Shipped Mudflap v1 to the Play Store, launching the product that now serves 150K+ monthly active users.</li>
                                 <li>Built the CI/CD infrastructure for Mudflap using Bitrise, which became the company standard and was presented to all mobile engineers as a best practice.</li>
                                 <li>Migrated Curbside SOS from a codebase with significant tech debt to a modern stack (Compose + MVVM), improving crash rates, delivery speed, and reducing regressions.</li>
                                 <li>Owned production stability: handled crash triage, set up Firebase Crashlytics monitoring, and managed staged rollouts.</li>
@@ -231,16 +232,16 @@
                     </ul>
                     <div class="subheading mt-4 mb-3">Architecture & Practices</div>
                     <ul class="mb-3">
-                        <li>Clean Architecture, MVVM, MVI</li>
+                        <li>API contract design</li>
                         <li>Modularization & scalable codebase design</li>
+                        <li>Performance Optimization (App Startup, Memory, Rendering)</li>
+                        <li>Release Management (Play Store, Staged Rollouts, Versioning)</li>
                         <li>CI/CD, GitHub Actions, Feature Flags, A/B Testing</li>
                         <li>Unit Testing, Automated Testing, Snapshot Testing</li>
                         <li>Static Code Analysis (Lint, Detekt, ktlint)</li>
-                        <li>API contract design</li>
-                        <li>Accessibility standards and compliance</li>
                         <li>Security (R8, Obfuscation, Secure Storage)</li>
-                        <li>Performance Optimization (App Startup, Memory, Rendering)</li>
-                        <li>Release Management (Play Store, Staged Rollouts, Versioning)</li>
+                        <li>Accessibility standards and compliance</li>
+                        <li>Clean Architecture, MVVM, MVI</li>
                     </ul>
                     <div class="subheading mt-4 mb-3">Product Thinking</div>
                     <ul class="mb-3">
@@ -253,8 +254,7 @@
                     </ul>
                     <div class="subheading mt-4 mb-3">AI & Automation</div>
                     <ul class="mb-3">
-                        <li><a href="https://github.com/hjdealba96/hjdealba-agentic-workflow" target="_blank">Integrating AI into development workflows</a></li>
-                        <li>Architecting agentic SDLC workflows for mobile</li>
+                        <li><a href="https://github.com/hjdealba96/hjdealba-agentic-workflow" target="_blank">AI-augmented development workflows</a></li>
                         <li>Building AI-powered features (voice assistants with <a href="https://vapi.ai" target="_blank">Vapi</a>, on-device chat with <a href="https://firebase.google.com/docs/ai-logic" target="_blank">Gemini</a>)</li>
                     </ul>
                     <div class="subheading mt-4 mb-3">Languages</div>
@@ -269,9 +269,9 @@
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5"><a href="#interests" class="anchor-heading">Interests</a></h2>
-                    <p>When I'm not working, I'm usually building side projects and products with AI, experimenting with new workflows, tooling, and automations. I also enjoy jumping into friends' and partners' projects outside my usual domain (e.g. data analysis, frontend, backend) to help them think through architecture and technical decisions, even if I'm not writing the code myself.</p>
+                    <p>When I'm not working, I'm usually building side projects and products with AI, experimenting with new workflows, tooling, and automations. I also enjoy jumping into friends' and partners' projects outside my usual domain (data analysis, frontend, backend) to help them think through architecture and technical decisions, even if I'm not writing the code myself.</p>
                     <p>I like to stay active with workouts and running, and occasionally get lost in a good video game (the original Halo trilogy is my all-time favorite). I like reading about contemporary history (especially military), science, and medical topics.</p>
-                    <p class="mb-0">I also cook. Sometimes because I want to, sometimes because I have to. Either way, I try a new recipe every week.</p>
+                    <p class="mb-0">I also cook. Sometimes because I want to, sometimes because I have to. Either way, I try a new recipe when I have the chance!</p>
                 </div>
             </section>
 
